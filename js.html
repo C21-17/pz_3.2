@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>JS example</title>
+</head>
+<body>
+  <h1>Зробити новий заголовок</h1>
+  <p>HTML і JavaScript.</p>
+  <ul>
+    <li>Пункт 1</li>
+    <li>Пункт 2</li>
+    <li>Пункт 3</li>
+  </ul>
+  <script>
+    // Цей код буде виконаний, коли сторінка завантажиться.
+    function myFunction() {
+      // Змінимо текст заголовка.
+      document.querySelector("h1").textContent = "JavaScript";
+    }
+
+    // Додамо кнопку, яка викликатиме функцію myFunction() при натисканні.
+    const button = document.createElement("button");
+    button.textContent = "Змінити заголовок";
+    button.addEventListener("click", myFunction);
+    document.body.appendChild(button);
+    var ulElement = document.querySelector('ul'); // Отримує перший елемент <ul> та зберігає його в змінну ulElement
+        console.log('Батьківський елемент для списку: ', ulElement.parentElement); // Виводить батьківський елемент для списку в консоль
+
+    var listItems = ulElement.querySelectorAll('li'); // Отримує всі елементи <li> в списку та зберігає їх в змінну listItems
+        listItems.forEach(function(item, index) {
+            console.log('Дочірній елемент ' + (index + 1) + ': ', item); // Виводить кожен дочірній елемент в консоль
+        });
+
+  </script>
+</body>
+</html>
